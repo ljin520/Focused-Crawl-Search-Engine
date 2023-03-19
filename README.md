@@ -1,7 +1,9 @@
 # Focused-Crawl-Search-Engine
 
- Implement a simple search engine using web pages extracted from focused crawl. Seeds URL includes Wiki and Uncyclopedia.
-  
+ Implement a simple search engine using web pages extracted from focused crawl. Seeds URL includes Wiki and Uncyclopedia. 
+ https://en.wikipedia.org/  
+ https://en.uncyclopedia.co/
+ 
 ## Basic Idea for Web Crawl
 
  BFS Ideal:  Implement a single-threaded crawler to crawl the web with two parameters: number of links and depth (levels).
