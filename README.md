@@ -26,13 +26,14 @@ while q:
         
         if isTopics(curText) == True:
             es.index(curURL)
-
+            
+        //Extract around 20,000 unique links
         if countDocuments() > 20001:
             break
         
     depth += 1
  
- ```
+ ``` 
 ## Build a Search Engine based on Elasticsearch, BackEnd Flask
 
 1. Install Elasticsearch: Download and install Elasticsearch from the official website.
