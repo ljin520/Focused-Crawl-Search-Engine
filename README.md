@@ -1,9 +1,9 @@
 # Focused-Crawl-Search-Engine
  Implement a simple search engine using web pages extracted from focused crawl. Seeds URL is Wiki and Uncyclopedia.
   
- ##Basic Idea for Web Crawl
- 
- ### BFS Ideal
+##Basic Idea for Web Crawl
+
+-BFS Ideal
  ```
  seeds = [A]
  
