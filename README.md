@@ -22,7 +22,9 @@ while q:
         curURL,depth = q.pop()
         curLinks =  getAllLinks(curURL)
         curText = getTextofPage(curURL)
-            
+        
+        numberofLinks = len(curLinks)
+        
         for eachURL in curLinks:
             q.append([eachURL,depth])
         
@@ -32,7 +34,8 @@ while q:
         //Extract around 20,000 unique links
         if countDocuments() > 20001:
             break
-        
+   
+   
     depth += 1
  
  ``` 
