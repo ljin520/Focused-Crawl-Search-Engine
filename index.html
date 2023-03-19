@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Extro Part Demo ElasticSearch Flask </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body style = "text-align:center">
+
+    <h1>Demo Board<h1/>
+
+    <input style = " float: none;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    padding: 14px;" 
+            class="search-box" 
+            placeholder="Enter keywords of cloth name to search..">
+
+    <ul style = "text-align:left" class="results"></ul> 
+
+    <script>
+      $(document).ready(function() {
+        let myabc;
+        $('.search-box').on('keydown', function (e) { 
+          clearTimeout(myabc)
+          myabc = setTimeout(() => {
+                  getAutoComplete();  
+          }, 200);
+        })
+      })
+
+      function getAutoComplete() {
+        const query = $('.search-box').val();
+        fetch(`http://localhost:5000/query?q=${encodeURIComponent(query.trim())}`)
+          .then((res) => res.json())
+          .then((data) => {
+                  $('.results').empty();
+                  for (let i = 0; i < data.length; i++) {
+                          $('.results').append(`<li>
+                                                    <dl>
+                                                      <dt style="font-size:16px;">Topic:</dt>
+                                                          <dd style="font-size:15px; font-family: "Times New Roman;">${data[i]['topic']}</dd>
+                                                      <dt style="font-size:16px;">URL:</dt> 
+                                                          <dd style="font-size:15px;">${data[i]['url']}</dd> 
+                                                      <dt style="font-size:16px;">Description:</dt>
+                                                          <dd style="font-size:15px;">${data[i]['content']}</dd>
+                                                    </dl>
+                                                  </li>`)
+                  }
+                })
+}
+    </script>
+  </body>
+</html>
