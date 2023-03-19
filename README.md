@@ -1,6 +1,6 @@
 # Focused-Crawl-Search-Engine
 
- Implement a simple search engine using web pages extracted from focused crawl. Seeds URL is Wiki and Uncyclopedia.
+ Implement a simple search engine using web pages extracted from focused crawl. Seeds URL includes Wiki and Uncyclopedia.
   
 ## Basic Idea for Web Crawl
 
