@@ -6,7 +6,7 @@
  
 ## Basic Idea for Web Crawl
 
- BFS Ideal:  Implement a single-threaded crawler to crawl the web with two parameters: number of links and depth (levels).
+ BFS Ideal:  Implement a single-threaded crawler to crawl the web.
  ```
  seeds = [A]
  
